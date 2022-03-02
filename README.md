@@ -11,7 +11,7 @@ Nele o jogador qual o tipo de calculo que vai jogar:
 
 ## Para o que é destinado este projeto.
 
-Este projeto visa estimular o pensamento matematico atravês de um jogo eletronico em crianças e adolecencia, podendo auxiliar a docencia no ensino de matematica de forma divertida para crianças.
+Este projeto visa estimular o pensamento matematico atravês de um jogo eletronico para crianças e adolecencentes, podendo auxiliar a docencia no ensino de matematica de forma divertida para crianças.
 
 ## Tecnologias Utilizadas:
 
