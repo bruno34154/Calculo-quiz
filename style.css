@@ -1,0 +1,215 @@
+/* index*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	background-color: #32CD32;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container{
+	background-image: url(img//quadro_pc.png);
+	width: 80%;
+	height: 800px;
+	
+
+}
+
+.title{
+	text-align: center;
+	font-size: 100px;
+	font-family: impact;
+	color: white;
+	margin-top: 100px;
+}
+.description{
+	text-align: center;
+	font-size: 50px;
+	font-family: impact;
+	color: white;
+	margin-left: 50px;
+	
+}
+.buttons{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-top: 50px;
+	margin-left: 350px;
+	
+}
+
+.link{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 100px;
+	font-size: 30px;
+	font-family: arial;
+	transition: 0.5s;
+}
+.link:hover{
+	transform: scale(1.2);
+}
+
+/* game */
+
+.titlej{
+	text-align: center;
+	font-size: 50px;
+	font-family: impact;
+	color: white;
+	margin-top: 30px;
+}
+.UI{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 80px;
+	padding: 0 15%;
+	
+}
+#score{
+	font-family: impact;
+	font-size: 40px;
+	color: white;
+}
+#timer{
+	width: 50%;
+	height: 30px;
+	font-size: 30px;
+	font-family: impact;
+}
+.calcule{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 50px;
+	color: white;
+	font-family: impact;
+}
+#input1{
+	margin-right: 40px;
+	width: 15%;
+	height: 60px;
+	text-align: center;
+	font-family: impact;
+	font-size: 30px;
+
+}
+#input2{
+	margin-left: 40px;
+	width: 15%;
+	height: 60px;
+	text-align: center;
+	font-family: impact;
+	font-size: 30px;
+}
+
+.user-space{
+	margin-left: 30%;
+	margin-top: 50px;
+	font-size: 40px;
+	color: white;
+	font-family: impact;
+}
+#answer{
+	height: 30px;
+
+}
+
+/*game over */
+.buttons_over{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-top: 50px;
+	margin-left: 450px;
+
+	
+}
+
+.buttons_game{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-top: 50px;
+	margin-left: 100px;
+
+}
+.link_game{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 20px;
+	font-family: arial;
+	transition: 0.5s;
+	margin-top: 200px;
+}
+.link_game:hover{
+
+transform: scale(1.2);
+
+}
+@media (max-width: 1400px){
+   .container{
+	background-image: url(img//quadro.png);
+	width: 85%;
+	height: 600px;
+	
+
+	}
+	.buttons{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-top: 50px;
+	margin-left: 200px;
+	
+	}
+
+	#score{
+	font-family: impact;
+	font-size: 30px;
+	color: white;
+	}
+	.link_game{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 20px;
+	font-family: arial;
+	transition: 0.5s;
+
+	}
+	#timer{
+	width: 50%;
+	height: 30px;
+	font-size: 25px;
+	font-family: impact;
+}
+.link{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 20px;
+	font-size: 30px;
+	font-family: arial;
+	transition: 0.5s;
+}
+
+}
+
