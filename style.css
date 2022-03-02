@@ -191,6 +191,7 @@ transform: scale(1.2);
 	font-size: 20px;
 	font-family: arial;
 	transition: 0.5s;
+	margin-top: 0px;
 
 	}
 	#timer{
