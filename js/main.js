@@ -24,8 +24,6 @@ function start(){ // função inicia jogo e variaveis
 	input2 = document.getElementById('input2');
 	answer = document.getElementById('answer');
 	displayTimer = document.getElementById('timer');
-	
-
 	tmp = setInterval(clock, 1000);
 	page = window.location.href;
 
@@ -40,9 +38,6 @@ function start(){ // função inicia jogo e variaveis
 
 	level();
 
-
-
-	
 	answer.addEventListener("keydown", verification);
 
 
@@ -59,7 +54,7 @@ function verification(){ //verifica resposta correta
    switch(keyboard){
    	 	case 13:
 
-   	 			switch(local){
+   	 		switch(local){
    	 			case 'soma.html':
    	 				result = random1 + random2;
    	 				break;
