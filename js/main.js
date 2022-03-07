@@ -9,6 +9,9 @@ var displayTimer;
 var min;
 var sec;
 var tmp;
+var page;
+var pages_arr;
+var game_over_msg;
 
 
 function start(){ // função inicia jogo e variaveis
@@ -19,23 +22,21 @@ function start(){ // função inicia jogo e variaveis
 	displayScore = document.getElementById('score');
 	input1 = document.getElementById('input1');
 	input2 = document.getElementById('input2');
-	random1 = Math.floor(Math.random()*10);
-	random2 = Math.floor(Math.random()*10);
 	answer = document.getElementById('answer');
 	displayTimer = document.getElementById('timer');
-	tmp = setInterval(clock, 1000);
 	
 
+	tmp = setInterval(clock, 1000);
+	page = window.location.href;
+
 	displayScore.innerHTML = `Score: ${score}`;
-	input1.value = random1;
-	input2.value = random2;
-	displayTimer.value = `0${min}:${sec}`;
+		displayTimer.value = `0${min}:${sec}`;
 	if(sec < 10){
 		displayTimer.value = `0${min}:0${sec}`;
 
 	}
 
-	
+	ramdonsAndShow(10);
 
 	level();
 
@@ -50,36 +51,47 @@ function start(){ // função inicia jogo e variaveis
 window.addEventListener("load", start);
 
 function verification(){ //verifica resposta correta
-   let tecla = event.keyCode;
+   let keyboard = event.keyCode;
    let result;
+   pages_arr = page.split("/");
+   let local = pages_arr[pages_arr.length-1];
    
-   switch(tecla){
+   switch(keyboard){
    	 	case 13:
+
+   	 			switch(local){
+   	 			case 'soma.html':
+   	 				result = random1 + random2;
+   	 				break;
+   	 			case 'sub.html':
+   	 				result = random1 - random2;
+   	 				break;
+   	 			case 'mult.html':
+   	 				result = random1 * random2;
+   	 				break;
+   	 			default:
+   	 				break;
+   	 		}
    	 		
-   	 		result = random1 - random2;
+   	 		
    	 		if(result == parseInt(answer.value)){
    	 			answer.value = " "
-   	 			random1 = Math.floor(Math.random()*10);
-				random2 = Math.floor(Math.random()*10);
-   	 			score += 20;
-				min = 1;
-				sec = 59;
-				displayTimer.value = `0${min}:${sec}`;
-				if(sec < 10){
-					displayTimer.value = `0${min}:0${sec}`;
+   	 			score += 10;
+					min = 1;
+					sec = 59;
+					displayTimer.value = `0${min}:${sec}`;
+					if(sec < 10){
+						displayTimer.value = `0${min}:0${sec}`;
 
-				}
-   	 			input1.value = random1;
-				input2.value = random2;
-				displayScore.innerHTML = `Score: ${score}`;
-			
-				level();
-				
-
-
+					}
+   	 	
+					displayScore.innerHTML = `Score: ${score}`;
+					ramdonsAndShow(10);
+					level();
    	 		}
    	 		else {
    	 			window.location.href = "game_over.html";
+   	 			
    	 		}
    	 		
    	 		break;
@@ -126,42 +138,35 @@ function answer_sure(){ // se resposta certa reinicia cronometro
 
 function level(){ //verifica a pontuação e aumenta o nivel de dificuldade
 
-
 	if(score > 50){
-		
-			random1 = Math.floor(Math.random()*50);
-			random2 = Math.floor(Math.random()*50);
-			input1.value = random1;
-			input2.value = random2;	
-	
+		ramdonsAndShow(50);
 	}
 
 	else if (score > 200) {
-
-
-		
-			random1 = Math.floor(Math.random()*100);
-			random2 = Math.floor(Math.random()*100);
-			input1.value = random1;
-			input2.value = random2;
-	
+		ramdonsAndShow(200);
 	}
 
 	else if (score > 500){
-		
-			random1 = Math.floor(Math.random()*500);
-			random2 = Math.floor(Math.random()*500);
-			input1.value = random1;
-			innput2.value = random2;
-		
+		ramdonsAndShow(500);
 	}
 	else if (score > 1000){
-		
-			random1 = Math.floor(Math.random()*1000);
-			random2 = Math.floor(Math.random()*1000);
-			input1.value = random1;
-			input2.value = random2;
-	
-
+		ramdonsAndShow(1000);
 	}
+
 }
+function ramdonsAndShow(number){ //randomiza os numeros
+		random1 = Math.floor(Math.random()*number);
+		random2 = Math.floor(Math.random()*number);
+		input1.value = random1;
+		input2.value = random2;
+}
+
+
+
+
+
+
+
+
+
+
